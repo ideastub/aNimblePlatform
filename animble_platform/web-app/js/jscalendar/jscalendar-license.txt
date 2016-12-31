@@ -1,0 +1,7 @@
+DHTML Calendar Widget, DatePicker Class for MooTools v1.11
+	
+http://www.dynarch.com/static/jscalendar-1.0/doc/html/reference.html
+	
+The calendar is released under the GNU Lesser General Public License.
+
+http://www.gnu.org/licenses/lgpl.html

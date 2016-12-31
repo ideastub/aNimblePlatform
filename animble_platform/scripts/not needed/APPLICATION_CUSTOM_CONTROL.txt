@@ -1,0 +1,891 @@
+1,481,"com.osframework.appclient.ui.controls.UITextField",,"importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+HtmlControl.getTextInput(control, model);",5/22/2006 0:40:07,0,8/29/2006 14:54:36,0,15,1,1,320
+2,13,"com.osframework.appclient.ui.controls.UIComboBox",,,5/23/2006 3:20:54,0,5/23/2006 3:20:54,0,0,1,1,320
+3,20,"com.osframework.appclient.ui.controls.UIValueList","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+list = SecurityServices.getProductRefList();
+acl = new ApplicationControlList();
+acm = new ApplicationControlModel();
+acm.setControlRefDisplay(""display"");
+acm.setControlText(""Product"");
+acl.add(acm);
+list.setColumnOrder(acl);		
+fie",,5/23/2006 3:20:56,0,5/23/2006 3:20:56,0,0,1,1,320
+4,24,"com.osframework.appclient.ui.controls.UIDateField",,,5/23/2006 3:21:02,0,5/23/2006 3:21:02,0,0,1,1,320
+5,28,"com.osframework.appclient.ui.controls.UIIntegerField",,,5/23/2006 3:21:06,0,5/23/2006 3:21:06,0,0,1,1,320
+6,29,"com.osframework.appclient.ui.controls.UIDoubleField",,,5/23/2006 3:21:10,0,5/23/2006 3:21:10,0,0,1,1,320
+7,23,"com.osframework.appclient.ui.controls.UIValueList","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+appView = SecurityServices.getApplicationView(applicationControlModel.getApplicationViewId());
+list = ReferenceServices.getActiveReferenceList(appView.getAppTypeRefId(), ReferenceGroup.Version);
+acl = new ApplicationControlList();
+acm = new ApplicationControlModel();
+acm.setControlRefDisplay("display");
+acm.setControlText("Version");
+acl.add(acm);
+list.setColumnOrder(acl);		
+field.setTableModel(list, 60);",,5/26/2006 10:12:19,0,5/26/2006 10:12:19,0,0,1,1,320
+8,908,"com.osframework.appclient.ui.controls.UIValueList","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+appView = SecurityServices.getApplicationView(applicationControlModel.getApplicationViewId());
+list = ReferenceServices.getActiveReferenceList(appView.getAppTypeRefId(), ReferenceGroup.Status);
+acl = new ApplicationControlList();
+acm = new ApplicationControlModel();
+acm.setControlRefDisplay("display");
+acm.setControlText("Status");
+acl.add(acm);
+list.setColumnOrder(acl);		
+field.setTableModel(list, 60);",,5/27/2006 5:30:01,0,5/27/2006 5:30:01,0,0,1,1,320
+9,914,"com.osframework.appclient.ui.components.UIFilePath",,,5/27/2006 6:55:43,0,5/27/2006 6:55:43,0,0,1,1,320
+10,915,"com.osrmt.appclient.common.ArtifactListPanel","importPackage(Packages.com.osframework.appclient.ui.controls);
+importPackage(Packages.com.osframework.appclient.ui.components);
+importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osrmt.appclient.common);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osframework.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+importPackage(Packages.com.osrmt.appclient.services);
+importPackage(Packages.com.osrmt.modellibrary.reqmanager);
+
+artifactList = RequirementServices.getStepChildren(model.getArtifactId(), ComponentTypeGroup.get(ComponentTypeGroup.USECASEMAINFLOW));
+controls = SecurityServices.getAppControlsByUser(ApplicationFramework.get(ApplicationGroup.ARTIFACTSTEPCOLUMNS));
+artifactList.setColumnOrder(controls);
+
+uilist = new UIEditList();
+uilist.setTableModel(artifactList, ArtifactListPanel.listWidth);
+field.setListControl(uilist, model, frame, ComponentTypeGroup.get(ComponentTypeGroup.USECASEMAINFLOW));",,5/27/2006 23:16:26,0,5/27/2006 23:16:26,0,0,1,1,320
+11,921,"com.osrmt.appclient.reqmanager.RelationshipList","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+importPackage(Packages.com.osrmt.modellibrary.reqmanager);
+
+field.initialize(model);",,5/28/2006 14:10:50,0,5/28/2006 14:10:50,0,0,1,1,320
+12,922,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Version, model.getArtifactRefId(), false);
+field.setModel(list);
+list.setSelectedRefId(model.getVersionRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Version, model.getArtifactRefId(), false);
+list.insertElementAt(new ReferenceDisplay(),0);
+HtmlControl.getCombo(control, model, list);",5/28/2006 16:35:50,0,8/29/2006 14:54:36,0,14,1,1,320
+13,923,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Status, model.getArtifactRefId(), false);
+field.setModel(list);
+list.setSelectedRefId(model.getStatusRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Status, model.getArtifactRefId(), false);
+list.insertElementAt(new ReferenceDisplay(),0);
+HtmlControl.getCombo(control, model, list);",5/28/2006 16:39:36,0,8/29/2006 14:54:36,0,14,1,1,320
+14,924,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Priority, model.getArtifactRefId(), false);
+field.setModel(list);
+list.setSelectedRefId(model.getPriorityRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Priority, model.getArtifactRefId(), false);
+list.insertElementAt(new ReferenceDisplay(),0);
+HtmlControl.getCombo(control, model, list);",5/28/2006 16:39:48,0,8/29/2006 14:54:36,0,14,1,1,320
+15,925,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Complexity, false);
+field.setModel(list);
+list.setSelectedRefId(model.getComplexityRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Complexity, false);
+list.insertElementAt(new ReferenceDisplay(),0);
+HtmlControl.getCombo(control, model, list);",5/28/2006 16:40:19,0,8/29/2006 14:54:36,0,14,1,1,320
+16,926,"com.osrmt.appclient.reqmanager.ArtifactHistoryList","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.group);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.appclient.services);
+
+
+artifactHistoryList = RequirementServices.getHistory(model.getArtifactId());
+controls = SecurityServices.getAppControlsByUser(ApplicationFramework.get(ApplicationGroup.ARTIFACTHISTORYCOLUMNS));
+artifactHistoryList.setColumnOrder(controls);
+
+field.setTableModel(artifactHistoryList,40);",,5/28/2006 16:49:45,0,5/28/2006 16:49:45,0,0,1,5,320
+17,928,"com.osframework.appclient.ui.components.UIUserField",,,5/28/2006 16:58:13,0,5/28/2006 16:58:13,0,0,1,1,320
+18,927,"com.osframework.appclient.ui.controls.UIEditorPane",,"importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+HtmlControl.getTextArea(control, model);",5/28/2006 16:58:20,0,8/29/2006 14:54:36,0,13,1,1,320
+19,929,"com.osframework.appclient.ui.components.UIAttachmentList","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.group);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+field.initialize(dialog, frame, TableNameGroup.ARTIFACT, model.getArtifactId(), RecordTypeFramework.get(RecordTypeFramework.USERRECORD));",,5/28/2006 17:12:29,0,5/28/2006 17:12:29,0,0,1,1,320
+20,939,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Author, false);
+field.setModel(list);
+list.setSelectedRefId(model.getAuthorRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Author, false);
+list.insertElementAt(new ReferenceDisplay(),0);
+HtmlControl.getCombo(control, model, list);",5/31/2006 11:31:04,0,8/29/2006 14:54:36,0,14,1,1,320
+21,940,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Assigned, false);
+field.setModel(list);
+list.setSelectedRefId(model.getAssignedRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Assigned, model.getArtifactRefId(), false);
+list.insertElementAt(new ReferenceDisplay(),0);
+HtmlControl.getCombo(control, model, list);",5/31/2006 11:31:08,0,8/29/2006 14:54:36,0,14,1,1,320
+22,986,"com.osrmt.appclient.common.ArtifactListPanel","importPackage(Packages.com.osframework.appclient.ui.controls);
+importPackage(Packages.com.osframework.appclient.ui.components);
+importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osrmt.appclient.common);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osframework.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+importPackage(Packages.com.osrmt.appclient.services);
+importPackage(Packages.com.osrmt.modellibrary.reqmanager);
+
+artifactList = RequirementServices.getStepChildren(model.getArtifactId(), ComponentTypeGroup.get(ComponentTypeGroup.REQUIREMENTDETAIL));
+controls = SecurityServices.getAppControlsByUser(ApplicationFramework.get(ApplicationGroup.ARTIFACTSTEPCOLUMNS));
+artifactList.setColumnOrder(controls);
+
+uilist = new UIEditList();
+uilist.setTableModel(artifactList, ArtifactListPanel.listWidth);
+field.setListControl(uilist, model, frame, ComponentTypeGroup.get(ComponentTypeGroup.REQUIREMENTDETAIL));",,6/2/2006 0:56:28,0,6/2/2006 0:56:30,0,0,1,1,320
+23,987,"com.osrmt.appclient.common.ArtifactListPanel","importPackage(Packages.com.osframework.appclient.ui.controls);
+importPackage(Packages.com.osframework.appclient.ui.components);
+importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osrmt.appclient.common);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osframework.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+importPackage(Packages.com.osrmt.appclient.services);
+importPackage(Packages.com.osrmt.modellibrary.reqmanager);
+
+artifactList = RequirementServices.getStepChildren(model.getArtifactId(), ComponentTypeGroup.get(ComponentTypeGroup.USECASEALTFLOW));
+controls = SecurityServices.getAppControlsByUser(ApplicationFramework.get(ApplicationGroup.ARTIFACTSTEPCOLUMNS));
+artifactList.setColumnOrder(controls);
+
+uilist = new UIEditList();
+uilist.setTableModel(artifactList, ArtifactListPanel.listWidth);
+field.setListControl(uilist, model, frame, ComponentTypeGroup.get(ComponentTypeGroup.USECASEALTFLOW));",,6/2/2006 0:56:30,0,6/2/2006 0:59:58,0,0,1,1,320
+24,994,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Artifact, model.getAppTypeRefId(), false);
+field.setModel(list);
+list.setSelectedRefId(model.getAppTypeRefId());",,6/2/2006 8:47:30,0,6/2/2006 8:47:32,0,0,1,1,320
+25,993,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.RecordType, model.getRecordTypeRefId(), false);
+field.setModel(list);
+list.setSelectedRefId(model.getRecordTypeRefId());",,6/2/2006 8:47:32,0,6/2/2006 8:49:00,0,0,1,1,320
+26,914,"com.osframework.appclient.ui.components.UIFilePath",,,6/2/2006 17:46:52,0,6/2/2006 17:46:52,0,0,1,1,320
+27,1013,"com.osframework.appclient.ui.controls.UIButton","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.appclient.system);
+
+cpc = new ApplicationSecurityUserFormController(frame);
+cpc.start(model);",,6/4/2006 22:05:32,0,6/4/2006 22:05:32,0,0,1,1,320
+28,1140,"com.osframework.appclient.ui.controls.UIValueList","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.group);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.appclient.services);
+importPackage(Packages.com.osrmt.appclient.common);
+baselineList = RequirementServices.getBaselines(applicationObject.getProductRefId());
+controls = SecurityServices.getAppControlsByUser(ApplicationFramework.get(ApplicationGroup.BASELINECOLUMNS));
+baselineList.setColumnOrder(controls);
+field.setTableModel(baselineList,80);",,6/9/2006 15:02:25,0,6/9/2006 15:02:27,0,0,1,1,320
+29,980,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Category, false);
+blank = new ReferenceDisplay();
+list.add(blank);
+field.setModel(list);
+list.setSelectedRefId(model.getCategoryRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Category,  false);
+list.insertElementAt(new ReferenceDisplay(),0);
+HtmlControl.getCombo(control, model, list);",6/12/2006 11:56:51,0,8/29/2006 14:54:36,0,14,1,1,320
+30,1168,"com.osframework.appclient.ui.controls.UIValueList","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+list = ReferenceServices.getActiveReferenceList(ReferenceGroup.Category);
+acl = new ApplicationControlList();
+acm = new ApplicationControlModel();
+acm.setControlRefDisplay(""display"");
+acm.setControlText(""Category"");
+acl.add(acm);
+li",,6/12/2006 12:36:54,0,6/12/2006 12:41:30,0,0,1,1,320
+31,1169,"com.osframework.appclient.ui.controls.UIValueList","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+appView = SecurityServices.getApplicationView(applicationControlModel.getApplicationViewId());
+list = ReferenceServices.getActiveReferenceList(appView.getAppTypeRefId(), ReferenceGroup.Priority);
+acl = new ApplicationControlList();
+acm = new ApplicationControlModel();
+acm.setControlRefDisplay("display");
+acm.setControlText("Priority");
+acl.add(acm);
+list.setColumnOrder(acl);		
+field.setTableModel(list, 60);",,6/12/2006 12:41:42,0,6/12/2006 12:41:51,0,0,1,1,320
+32,1174,"com.osrmt.appclient.common.ArtifactListPanel","importPackage(Packages.com.osframework.appclient.ui.controls);
+importPackage(Packages.com.osframework.appclient.ui.components);
+importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osrmt.appclient.common);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osframework.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+importPackage(Packages.com.osrmt.appclient.services);
+importPackage(Packages.com.osrmt.modellibrary.reqmanager);
+
+artifactList = RequirementServices.getStepChildren(model.getArtifactId(), ComponentTypeGroup.get(ComponentTypeGroup.REQUIREMENTDETAIL));
+controls = SecurityServices.getAppControlsByUser(ApplicationFramework.get(ApplicationGroup.ARTIFACTSTEPCOLUMNS));
+artifactList.setColumnOrder(controls);
+
+uilist = new UIEditList();
+uilist.setTableModel(artifactList, ArtifactListPanel.listWidth);
+field.setListControl(uilist, model, frame, ComponentTypeGroup.get(ComponentTypeGroup.REQUIREMENTDETAIL));",,6/14/2006 7:05:46,0,6/14/2006 7:05:47,0,0,1,1,320
+33,1237,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.CustomControl,false);
+field.setModel(list);
+list.setSelectedRefId(model.getCustomControlRefId());",,8/24/2006 20:21:50,0,8/24/2006 20:21:50,0,0,1,2,320
+34,1354,"com.osframework.appclient.ui.controls.UICheckBox",,,8/27/2006 14:40:11,0,8/27/2006 14:40:11,0,0,1,2,320
+35,1355,"com.osframework.appclient.ui.controls.UIOptionGroup",,,8/27/2006 14:40:28,0,8/27/2006 14:40:29,0,0,1,2,320
+36,1493,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Product, false);
+field.setModel(list);
+list.setSelectedRefId(model.getProductRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Product,  false);
+list.insertElementAt(new ReferenceDisplay(),0);
+HtmlControl.getCombo(control, model, list);",9/23/2006 14:40:41,0,9/23/2006 14:40:41,0,0,1,3,320
+37,1503,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.IssueClosedCategory, false);
+field.setModel(list);
+list.setSelectedRefId(model.getClosedCategoryRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.IssueClosedCategory,  false);
+list.insertElementAt(new ReferenceDisplay(),0);
+HtmlControl.getCombo(control, model, list);",9/23/2006 14:40:51,0,9/23/2006 14:40:51,0,0,1,3,320
+38,1500,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.IssueFrequency, false);
+list.insertElementAt(new ReferenceDisplay(),0);
+field.setModel(list);
+list.setSelectedRefId(model.getFrequencyRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.IssueFrequency,  false);
+list.insertElementAt(new ReferenceDisplay(),0);
+HtmlControl.getCombo(control, model, list);",9/23/2006 14:40:55,0,9/23/2006 14:40:55,0,0,1,3,320
+39,1496,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.UserGroup, false);
+field.setModel(list);
+list.setSelectedRefId(model.getAssignedUserGroupRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.UserGroup,  false);
+list.insertElementAt(new ReferenceDisplay(),0);
+HtmlControl.getCombo(control, model, list);",9/23/2006 14:41:02,0,9/23/2006 14:41:02,0,0,1,3,320
+40,1502,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.OperatingSystem, false);
+field.setModel(list);
+list.setSelectedRefId(model.getClientOsRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.OperatingSystem,  false);
+list.insertElementAt(new ReferenceDisplay(),0);
+HtmlControl.getCombo(control, model, list);",9/23/2006 14:41:07,0,9/23/2006 14:41:07,0,0,1,3,320
+41,1498,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.IssuePriority, false);
+field.setModel(list);
+list.setSelectedRefId(model.getPriorityRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.IssuePriority,  false);
+list.insertElementAt(new ReferenceDisplay(),0);
+HtmlControl.getCombo(control, model, list);",9/23/2006 14:41:12,0,9/23/2006 14:41:12,0,0,1,3,320
+42,1501,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.IssueReproduce, false);
+list.insertElementAt(new ReferenceDisplay(),0);
+field.setModel(list);
+list.setSelectedRefId(model.getStatusRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.IssueReproduce,  false);
+list.insertElementAt(new ReferenceDisplay(),0);
+HtmlControl.getCombo(control, model, list);",9/23/2006 14:41:18,0,9/23/2006 14:41:18,0,0,1,3,320
+43,1504,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.IssueResolvedCategory, false);
+field.setModel(list);
+list.setSelectedRefId(model.getResolvedCategoryRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.IssueResolvedCategory,  false);
+list.insertElementAt(new ReferenceDisplay(),0);
+HtmlControl.getCombo(control, model, list);",9/23/2006 14:41:24,0,9/23/2006 14:41:24,0,0,1,3,320
+44,1499,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.IssueSeverity, false);
+list.insertElementAt(new ReferenceDisplay(),0);
+field.setModel(list);
+list.setSelectedRefId(model.getSeverityRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.IssueSeverity,  false);
+list.insertElementAt(new ReferenceDisplay(),0);
+HtmlControl.getCombo(control, model, list);",9/23/2006 14:41:40,0,9/23/2006 14:41:40,0,0,1,3,320
+45,1497,"com.osframework.appclient.ui.components.UIUserField",,,9/23/2006 14:41:43,0,9/23/2006 14:41:43,0,0,1,3,320
+46,1507,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services)
+importPackage(Packages.com.osframework.appclient.common)
+importPackage(Packages.com.osframework.modellibrary.reference.common)
+importPackage(Packages.com.osframework.modellibrary.reference.group)
+importPackage(Packages.com.osrmt.appclient.common)
+
+var grp = ReferenceGroup.IssueStatus
+var id = model.getStatusRefId()
+list = new ReferenceDisplayList()
+if (id==0){
+list.add(ReferenceServices.getDisplay(grp,""NEW""))
+}else if (id==ReferenceServic","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.IssueStatus,  false);
+HtmlControl.getCombo(control, model, list);",9/23/2006 17:32:13,0,9/23/2006 17:32:13,0,0,1,3,320
+47,1508,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.IssueVersion, false);
+field.setModel(list);
+list.setSelectedRefId(model.getVersionRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.IssueVersion,  false);
+HtmlControl.getCombo(control, model, list);",9/23/2006 17:32:35,0,9/23/2006 17:34:39,0,0,1,3,320
+48,1509,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.OperatingSystem, false);
+field.setModel(list);
+list.setSelectedRefId(model.getServerOsRefId());","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.www.common);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.OperatingSystem,  false);
+list.insertElementAt(new ReferenceDisplay(),0);
+HtmlControl.getCombo(control, model, list);",9/23/2006 17:37:01,0,9/23/2006 17:37:01,0,0,1,3,320
+49,1525,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = new ReferenceDisplayList();
+list.add(ReferenceServices.getReferenceDisplay(TraceTreeGroup.TRACEDOWNTO));
+list.add(ReferenceServices.getReferenceDisplay(TraceTreeGroup.TRACEUPTO));
+field.setModel(list);
+list.setSelectedRefId(model.getTraceDirection().getTraceTreeRefId());",,10/1/2006 16:04:40,0,10/1/2006 16:04:40,0,0,1,3,320
+50,1524,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = new ReferenceDisplayList();
+list.add(ReferenceServices.getReferenceDisplay(TraceTreeGroup.STARTALL));
+list.add(ReferenceServices.getReferenceDisplay(TraceTreeGroup.STARTCHILDREN));
+list.add(ReferenceServices.getReferenceDisplay(TraceTreeGroup.STARTNOCHILDREN));
+list.add(ReferenceServices.getReferenceDisplay(TraceTreeGroup.STARTPARENTS));
+list.add(ReferenceServices.getReferenceDisplay(TraceTreeGroup.STARTNOPARENTS));
+field.setModel(list);
+list.setSelectedRefId(model.getStartTraceWith().getTraceTreeRefId());",,10/1/2006 16:13:33,0,10/1/2006 16:13:37,0,0,1,3,320
+51,1526,"com.osframework.appclient.ui.controls.UIValueList","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+list = ReferenceServices.getActiveReferenceList(ReferenceGroup.Artifact);
+acl = new ApplicationControlList();
+acm = new ApplicationControlModel();
+acm.setControlRefDisplay(""display"");
+acm.setControlText(""Artifact"");
+acl.add(acm);
+li",,10/1/2006 16:14:01,0,10/1/2006 16:14:01,0,0,1,3,320
+52,1527,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Artifact, false);
+field.setModel(list);
+list.setSelectedRefId(model.getTraceFromArtifactRefId());",,10/1/2006 16:16:32,0,10/1/2006 16:16:32,0,0,1,3,320
+53,1555,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.appclient.common);
+
+list = Util.getUserList();
+list.insertElementAt(new ReferenceDisplay(),0);
+field.setModel(list);
+list.setSelectedRefId(model.getAssignedUserId());",,10/8/2006 20:35:38,0,10/8/2006 21:02:27,1,1,1,1,320
+54,1556,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.appclient.common);
+
+
+list = Util.getUserList();
+list.insertElementAt(new ReferenceDisplay(),0);
+field.setModel(list);
+if (model.getIssueId() == 0) {
+  list.setSelectedRefId(user.getUserId());
+} else {
+  list.setSelectedRefId(model.getSubmittedUserId());
+}",,10/8/2006 20:46:35,0,10/8/2006 20:46:35,0,0,1,3,320
+55,1558,"com.osframework.appclient.ui.components.UIAttachmentList","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.group);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+field.initialize(dialog, frame, TableNameGroup.ISSUE, model.getIssueId(), RecordTypeFramework.get(RecordTypeFramework.USERRECORD));",,10/8/2006 21:43:57,0,10/8/2006 21:43:57,0,0,1,3,320
+56,1565,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.UserGroup, false);
+field.setModel(list);
+list.setSelectedRefId(model.getUserGroupRefId());",,10/9/2006 11:14:18,0,10/9/2006 11:14:18,0,0,1,3,320
+57,1564,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.appclient.common);
+
+list = Util.getUserList();
+field.setModel(list);
+list.setSelectedRefId(model.getUserId());",,10/9/2006 11:16:46,0,10/9/2006 11:16:48,0,0,1,3,320
+68,1609,"com.osframework.appclient.ui.components.UIUserField","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = SecurityServices.getUserList();
+field.setModel(list);
+list.setSelectedRefId(model.getCreateUserId());",,12/16/2006 15:31:38,0,12/16/2006 15:31:38,0,0,1,4,320
+69,1610,"com.osframework.appclient.ui.components.UIUserField","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = SecurityServices.getUserList();
+field.setModel(list);
+list.setSelectedRefId(model.getUpdateUserId());",,12/16/2006 15:31:47,0,12/16/2006 15:31:50,0,0,1,5,320
+70,1611,"com.osrmt.appclient.common.ArtifactDocumentPanel","importPackage(Packages.java.util);
+importPackage(Packages.com.osframework.appclient.ui.controls);
+importPackage(Packages.com.osframework.appclient.ui.components);
+importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osrmt.appclient.common);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osframework.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osframework.appclient.ui.editor);
+
+importPackage(Packages.com.osrmt.appclient.services);
+importPackage(Packages.com.osrmt.modellibrary.reqmanager);
+
+field.initialize(model.getArtifactId());",,12/17/2006 23:44:47,0,12/18/2006 16:41:42,1,1,1,1,320
+71,1641,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = SecurityServices.getUserList();
+field.setModel(list);
+list.setSelectedRefId(model.getAssignedUserId());",,2/26/2007 15:42:21,0,2/26/2007 15:42:21,0,0,1,5,320
+72,1642,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = SecurityServices.getUserGroupList();
+field.setModel(list);
+list.setSelectedRefId(model.getAssignedUserGroupId());",,2/26/2007 15:43:27,0,2/26/2007 15:43:29,0,0,1,5,320
+73,1555,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = SecurityServices.getUserGroupList();
+field.setModel(list);
+list.setSelectedRefId(model.getAssignedUserGroupId());",,2/26/2007 16:32:31,0,2/26/2007 16:32:31,0,0,1,5,320
+74,1688,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = SecurityServices.getUserGroupList();
+field.setModel(list);
+list.setSelectedRefId(model.getAssignedUserGroupId());",,2/26/2007 16:37:12,0,2/26/2007 16:37:12,0,0,1,5,320
+75,5336,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.Product, false);
+field.setModel(list);
+list.setSelectedRefId(model.getTableKeyId());",,3/6/2007 16:15:41,0,3/6/2007 16:15:41,0,0,1,5,320
+76,5347,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.UserGroup, false);
+field.setModel(list);
+list.setSelectedRefId(model.getParentTableKeyId());",,3/7/2007 11:28:32,0,3/7/2007 11:28:32,0,0,1,5,320
+77,5459,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.CustomRef1, model.getArtifactRefId(), false);
+field.setModel(list);
+list.setSelectedRefId(model.getCustom1RefId());",,3/13/2007 16:28:23,0,3/13/2007 16:28:23,0,0,1,5,320
+78,5460,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.CustomRef2, model.getArtifactRefId(), false);
+field.setModel(list);
+list.setSelectedRefId(model.getCustom2RefId());",,3/13/2007 16:28:36,0,3/13/2007 16:28:36,0,0,1,5,320
+79,5461,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.CustomRef3, model.getArtifactRefId(), false);
+field.setModel(list);
+list.setSelectedRefId(model.getCustom3RefId());",,3/13/2007 16:28:46,0,3/13/2007 16:28:46,0,0,1,5,320
+80,5462,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.CustomRef4, model.getArtifactRefId(), false);
+field.setModel(list);
+list.setSelectedRefId(model.getCustom4RefId());",,3/13/2007 16:28:55,0,3/13/2007 16:28:55,0,0,1,5,320
+81,5571,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = ReferenceServices.getDisplayList(ReferenceGroup.View, false);
+field.setModel(list);
+list.setSelectedRefId(model.getParameterViewRefId());",,3/19/2007 14:46:00,0,3/19/2007 14:46:00,0,0,1,5,320
+2128153,929,"com.osframework.appclient.ui.components.UIAttachmentList","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.group);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+field.initialize(dialog, frame, TableNameGroup.ARTIFACT, model.getArtifactId(), RecordTypeFramework.get(RecordTypeFramework.USERRECORD));",,12/20/2006 1:54:02,0,12/20/2006 1:54:02,1,1,1,1,320
+3966015,1641,"com.osframework.appclient.ui.controls.UIComboBox","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+list = SecurityServices.getUserList();
+field.setModel(list);
+list.setSelectedRefId(model.getAssignedUserId());",,2/26/2007 15:52:25,0,2/26/2007 15:52:25,1,1,1,1,320
+7150851,929,"com.osframework.appclient.ui.components.UIAttachmentList","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.group);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+field.initialize(dialog, frame, TableNameGroup.ARTIFACT, model.getArtifactId(), RecordTypeFramework.get(RecordTypeFramework.USERRECORD));",,12/20/2006 1:54:34,0,12/20/2006 1:54:34,1,1,1,1,320
+7315975,929,"com.osframework.appclient.ui.components.UIAttachmentList","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.group);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+field.initialize(dialog, frame, TableNameGroup.ARTIFACT, model.getArtifactId(), RecordTypeFramework.get(RecordTypeFramework.USERRECORD));",,12/20/2006 2:01:56,0,12/20/2006 2:01:56,1,1,1,1,320
+8278558,929,"com.osframework.appclient.ui.components.UIAttachmentList","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.group);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+field.initialize(dialog, frame, TableNameGroup.ARTIFACT, model.getArtifactId(), RecordTypeFramework.get(RecordTypeFramework.USERRECORD));",,12/20/2006 2:00:20,0,12/20/2006 2:00:20,1,1,1,1,320
+9374562,1611,"com.osrmt.appclient.common.ArtifactDocumentPanel","importPackage(Packages.java.util);
+importPackage(Packages.com.osframework.appclient.ui.controls);
+importPackage(Packages.com.osframework.appclient.ui.components);
+importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osrmt.appclient.common);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osframework.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osframework.appclient.ui.editor);
+
+importPackage(Packages.com.osrmt.appclient.services);
+importPackage(Packages.com.osrmt.modellibrary.reqmanager);
+
+field.initialize(model.getArtifactId());",,12/20/2006 2:17:01,0,12/20/2006 2:17:01,1,1,1,1,320
+9765286,929,"com.osframework.appclient.ui.components.UIAttachmentList","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.group);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+field.initialize(dialog, frame, TableNameGroup.ARTIFACT, model.getArtifactId(), RecordTypeFramework.get(RecordTypeFramework.USERRECORD));","",12/20/2006 2:08:24,0,12/20/2006 2:10:09,1,4,1,1,320
+9788727,929,"com.osframework.appclient.ui.components.UIAttachmentList","importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osframework.modellibrary.reference.group);
+importPackage(Packages.com.osframework.modellibrary.reference.security);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+
+
+field.initialize(dialog, frame, TableNameGroup.ARTIFACT, model.getArtifactId(), RecordTypeFramework.get(RecordTypeFramework.USERRECORD));",,12/20/2006 2:00:07,0,12/20/2006 2:00:07,1,1,1,1,320

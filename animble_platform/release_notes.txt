@@ -1,0 +1,61 @@
+Release Notes - v0.4
+* Added Index and Search for Project and Artifact Fields
+* Added Filter Search by Facets: by Project, by Type, by Status
+* Added Search Index Admin Screen
+* Added Status to Project
+* Added Dashboards: My Artifact Assignments, Recently Modified
+* Clear artifact cache at artifact list
+* Clear artifact cache at project select
+* Clear project cache at project list
+* Bug: Add missing privileges for User Role to access Artifact History and Release views
+* Bug: Fix view alignment in Firefox and Chrome where view going off screen
+* Removed use of grails.serverURL in absolute links (eliminating need to configure this property)
+* Change startup scripts to include port and domain
+* Change database name to have _ in name (for better Linux compatibility)
+* Removed fonts in jasper reports (for better Linux compatibility)
+* Upgrade Grails to 2.1.1
+* Upgrade Hibernate plug-in to 2.1.1
+* Upgrade Tomcat plug-in to 2.1.1
+* Upgrade Spring Security Core plug-in to 1.2.7.1
+
+This upgrade contains a new Grails version.  As such, the .grails folder should be refreshed in order to prevent any library version issues.  To accomplish this, rename the .ivy2 folder and .grails folder to .ivy2OLD and .grailsOLD respectively.  These folders are typically found at:
+C:\Documents and Settings\<user_login>\.grails
+C:\Documents and Settings\<user_login>\.ivy2
+
+Also, v0.4 relies on a new database naming convention (substituting _ for the space character) which enhances supportability on linux.  If upgrading from a previous installation of aNimble Platform, rename the database to aNimble_Platform through the appropriate database Admin tool and/or scripts.
+
+Finally, as Search is now a new feature, the initial Search Index must be created.  Go to the Administration screen, click Search, and then click Run Index.  A thread will be started which will begin creation of the Search Index.  All new additions and updates to records are automatically reflected during the save process.
+
+Release Notes - v0.3
+* Added Releases to Projects
+* Added History (Create, Read, Compare, Rollback) to Artifacts
+* Added Dependencies to Artifacts
+* Added Reports to Projects
+* Added Reports to Artifacts
+* Added drag and drop feature to allow moving Artifacts to other folders
+* Added setting to allow Artifact Tree to stay expanded after save and update
+* Adjusted Database Upgrade scripts to more logical naming conventions
+* Added custom reference lists in Artifact Views
+* Added filtering to View Controls
+* Upgraded dojo toolkit to v1.6.1
+* Bug Fix: Parent_Id in session producing wrong artifact relationships
+* Bug Fix: Single quote and double quote prevent Project List from rendering. Also fixed Artifact, Sprint, Release and Reference Data lists.
+* Bug Fix: Correct missing primary keys in tables for MySQL and SQL Server.
+* Bug Fix: Correct Firefox menu wrap issue
+
+Release Notes - v0.2
+* Added MySQL Database support
+* Upgraded Grails to 1.3.5
+* Simplified install by adding Grails to deployment package
+* Created scripts for starting dev and prod instances
+* Added Agile Projects
+* Added Agile Sprints
+* Added Agile Backlog Items
+* Added Agile Tasks
+* Changed Artifact Number to be String instead of Int
+* Added Security Authentication via Spring Security
+* Added Security Role Authorization via Spring Security
+* Added Created By and Updated By User Name history
+* Refactored error handling for all services
+* Refined required fields on each domain object
+* Placed key elements in session memory (Current Project, Artifact, User)

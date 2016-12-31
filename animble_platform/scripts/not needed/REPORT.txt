@@ -1,0 +1,64 @@
+1,278,,5559,"if (params.getValuesSqlIn(""Product"", false) == """") {
+   report.setReportSql(sql + "" where product_ref_id >0  "");
+} else {
+   report.setReportSql(sql + "" where product_ref_id in (""  + params.getValuesSqlIn(""Product"", false) + "")"");
+}",0,,,,,,"s = """";
+for (i=0; i<list.size(); i++) {
+   if (i > 0) { 
+      s = s + ""."";
+   }
+   s = s + list.get(i);
+}
+s;","select artifact_id from artifact where active_ind = 1",,4/25/2006 18:25:31,0,8/29/2006 14:54:40,0,4,1,1,320
+2,283,,5559,"if (params.getValuesSqlIn(""Product"", false) == """") {
+   report.setReportSql(sql + "" where product_ref_id >0  "");
+} else {
+   report.setReportSql(sql + "" where product_ref_id in (""  + params.getValuesSqlIn(""Product"", false) + "")"");
+}",0,,,,,,"s = """";
+for (i=0; i<list.size(); i++) {
+   if (i > 0) { 
+      s = s + ""."";
+   }
+   s = s + list.get(i);
+}
+s;","select artifact_id from artifact where active_ind = 1",,4/27/2006 23:49:47,0,3/8/2007 9:53:48,1,5,1,1,320
+3,1601,,5559,,1,"importPackage(Packages.java.util);
+importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osrmt.appclient.services);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.appclient.services);
+importPackage(Packages.com.osrmt.modellibrary.reqmanager);
+
+var artifacts = RequirementServices.getAllSameChildren(ArtifactGroup.REQUIREMENT,0);
+
+var list = new ArtifactList(artifacts.size());
+var e1 = artifacts.elements();
+while (e1.hasMoreElements()) {
+   var artifact = e1.nextElement();
+   if (artifact.isActive()) {
+      list.add(artifact);
+   }
+}
+
+list;","importPackage(Packages.java.lang);
+importPackage(Packages.java.util);
+importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osrmt.appclient.services);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.appclient.services);
+importPackage(Packages.com.osframework.framework.utility);
+
+sb = new StringBuffer(8*1024*1024);
+sb.append(""<?xml version=\""1.0\"" encoding=\","importPackage(Packages.java.lang);
+importPackage(Packages.java.util);
+importPackage(Packages.com.osframework.appclient.services);
+importPackage(Packages.com.osframework.modellibrary.reference.common);
+importPackage(Packages.com.osrmt.appclient.services);
+importPackage(Packages.com.osrmt.modellibrary.reference.group);
+importPackage(Packages.com.osrmt.appclient.services);
+importPackage(Packages.com.osframework.framework.utility);
+
+sb = new StringBuffer(8*1024*1024);
+sb.append(""<?xml version=\""1.0\"" encoding=\","","/artifactlist/artifact",,,,12/13/2006 14:33:25,0,12/19/2006 11:09:35,1,34,1,4,320

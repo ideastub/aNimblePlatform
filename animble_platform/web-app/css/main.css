@@ -1,0 +1,422 @@
+body {
+font-family: Arial, Helvetica, sans-serif;
+color:black;
+background-color: #808080;
+/*float:left;*/
+}
+
+.login{
+color:DarkOrange;
+}	
+
+.separator{
+color:#E8E8E8;
+}
+
+.logout{
+color:white;
+}
+
+.logo_and_login{
+padding:0px;
+border-style:solid;
+border-color:red;
+}
+
+.sectionTitle{
+color:white;
+font-weight:bold;
+font-family: Arial, Helvetica, sans-serif;
+FONT-SIZE: 16px
+PADDING-LEFT: 9px;
+}
+
+.buttonTitle{
+color:white;
+font-family: Helvetica, Arial, sans-serif;
+FONT-SIZE: 13px;
+text-decoration:none;
+}
+
+.buttonSelected{
+background-image:url(/animble_platform/images/button_tile_selected.png);
+text-align:center;
+padding-right:10px;
+padding-left:10px;
+}
+
+.buttonSeperator{
+background-image:url(/animble_platform/images/button_seperator.png);
+}
+
+.buttonNotSelected{
+background-image:url(/animble_platform/images/button_tile_not_selected.png);
+text-align:center;
+padding-right:10px;
+padding-left:10px;
+}
+
+.menuDropdown{
+color:white;
+background-color:#404040;
+}
+
+.menubuttonSelected{
+background-image:url(/animble_platform/images/menu_bar_tile_selected.png);
+text-align:center;
+padding-top:0px;
+padding-bottom:0px;
+padding-right:10px;
+padding-left:10px;
+font-weight:bold;
+}
+
+.menubuttonNotSelected{
+background-image:url(/animble_platform/images/menu_bar_tile.png);
+text-align:center;
+padding-top:0px;
+padding-bottom:0px;
+padding-right:10px;
+padding-left:10px;
+font-weight:bold;
+}
+
+.menubarTile{
+background-image:url(/animble_platform/images/menu_bar_tile.png);
+text-align:center;
+padding-top:0px;
+padding-bottom:0px;
+padding-right:10px;
+padding-left:10px;
+
+}
+
+.menubuttonSeperator{
+background-image:url(/animble_platform/images/menu_bar_seperator.png);
+}
+
+
+.menu_bar{
+padding-top:15px;
+}
+
+.searchbuttonSelected{
+background-image:url(/animble_platform/images/search_button_selected.png);
+}
+
+.searchbuttonNotSelected{
+background-image:url(/animble_platform/images/search_button_not_selected.png);
+}
+
+.searchInput {
+	border: 0px solid #FFFFFF;
+	background-color:White;
+	background-image:url('/animble_platform/images/search.png');
+	background-repeat:no-repeat;
+	background-position:right center;
+	color: Grey;
+	padding: 0;
+	margin: 0;
+}
+
+.blueline{
+background-image:url(/animble_platform/images/blue_tile.png);
+}
+
+.lightblueline{
+background-image:url(/animble_platform/images/light_blue_tile.png);
+}
+
+.breadcrumbs_background{
+background-image:url(/animble_platform/images/breadcrumbs_background.png);
+padding-top:4px;
+padding-bottom:4px;
+padding-right:3px;
+padding-left:3px;
+}
+
+.breadcrumb_gray_box{
+background-image:url(/animble_platform/images/breadcrumb_box.png);
+padding-top:2px;
+padding-bottom:2px;
+padding-right:10px;
+padding-left:4px;
+}
+
+.breadcrumb_blue_box{
+background-image:url(/animble_platform/images/light_blue_tile.png);
+padding-top:2px;
+padding-bottom:2px;
+padding-right:10px;
+padding-left:4px;
+}
+
+A:link {
+text-decoration: none;
+color: white;
+font-family: Helvetica, Arial, sans-serif;
+}
+
+A:visited {
+text-decoration: none;
+color: white;
+font-family: Helvetica, Arial, sans-serif;
+}
+
+A:active {
+text-decoration: none;
+color: white;
+font-family: Helvetica, Arial, sans-serif;
+}
+
+A:hover {
+text-decoration:none;
+color: white;
+font-family: Helvetica, Arial, sans-serif;
+}
+
+.breadcrumb_link A:link{
+color:white;
+font-family: Helvetica, Arial, sans-serif;
+FONT-SIZE: 10px;
+}
+
+.breadcrumb_link A:visited{
+color:white;
+font-family: Helvetica, Arial, sans-serif;
+FONT-SIZE: 12px;
+}
+
+.breadcrumb_link A:active{
+color:white;
+font-family: Helvetica, Arial, sans-serif;
+FONT-SIZE: 12px;
+}
+
+.breadcrumb_link A:hover{
+text-decoration:under-line;
+color:white;
+font-family: Helvetica, Arial, sans-serif;
+FONT-SIZE: 12px;
+}
+
+.dialog{
+background-color: #FFFFFF;
+}
+
+.prop{
+height:20px;
+}
+
+.name{
+color:darkgrey;
+padding-right:10px;
+padding-left:10px;
+width:150px;
+}
+
+.value{
+padding-right:10px;
+padding-left:10px;
+}
+
+.nav{
+background-color: #FFFFFF;
+padding-right:10px;
+padding-left:10px;
+padding-bottom:20px;
+}
+
+.landing{
+
+}
+
+.tabContainer{
+background-color: #FFFFFF;
+border-bottom:0px #FFFFFF;
+}
+
+.body{
+}
+
+.report_params{
+background-color: #FFFFFF;
+}
+
+.report_body{
+background-color: #FFFFFF;
+height:300px;
+}
+
+.errors {
+background-color: #FF9FA2;
+border: solid 1px #CC0005;
+}
+
+.message {
+background-color: #8DE983;
+border: solid 1px #21AD2C;
+padding-right:0px;
+padding-left:0px;
+padding-top:3px;
+padding-bottom:3px;
+}
+
+.paginateButtons {
+background-color: #FFFFFF;
+color:white;
+padding-right:10px;
+padding-left:10px;
+padding-top:10px;
+padding-bottom:10px;
+}
+
+.odd{
+background-color:#FFFFFF;
+padding:4px 4px 4px 4px;
+height: 25px;
+}
+
+.even{
+background-image:url(/animble_platform/images/light_blue_tile.png);
+padding:4px 4px 4px 4px;
+height: 25px;
+}
+
+.oddSearchResult{
+background-color:#FFFFFF;
+padding:4px 4px 4px 4px;
+}
+
+.evenSearchResult{
+background-image:url(/animble_platform/images/light_blue_tile.png);
+padding:4px 4px 4px 4px;
+}
+
+.oddLink:link{color:#1B8C12;}
+.oddLink:visited {color:#1B8C12;}
+.oddLink:hover {color:#1B8C12;}
+.oddLink:active {color:#1B8C12;}
+
+.sortable{
+background-color: DarkGrey;
+font-weight:bold;
+padding-top:4px;
+padding-bottom:4px;
+padding-right:10px;
+padding-left:4px;
+height: 25px;
+}
+
+th{
+background-color: DarkGrey;
+font-weight:bold;
+padding:4px 4px 4px 4px;
+height: 25px;
+text-align:center;
+}
+
+.currentStep{
+background-color: DarkGrey;
+color:black;
+padding-right:5px;
+padding-left:5px;
+}
+
+.step{
+background-color: DarkGrey;
+padding-right:5px;
+padding-left:5px;
+margin: 5px;
+}
+
+.nextLink{
+background-color: DarkGrey;
+padding-right:5px;
+padding-left:5px;
+}
+
+.prevLink {
+background-color: DarkGrey;
+padding-right:5px;
+padding-left:5px;
+}
+
+LI.bluegray_bullet {
+	list-style-image:url('/animble_platform/images/bullet.png');
+}
+
+/* ---- calendar and input styles begin ---- */
+
+input.DatePicker{
+	display: block;
+	cursor: pointer;
+}
+.dp_container{
+	position: relative;
+	padding: 0;
+	z-index: 500;
+}
+.dp_cal{
+	background-color: #fff;
+	border: 1px solid #000000;
+	position: absolute;
+	width: 177px;
+	top: 24px;
+	left: 0;
+	margin: 0px 0px 3px 0px;
+}
+.dp_cal table{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.dp_cal select{
+	margin: 2px 3px;
+	font-size: 11px;
+}
+.dp_cal select option{
+	padding: 1px 3px;
+}
+.dp_cal th,
+.dp_cal td{
+	width: 14.2857%;
+	text-align: center;
+	font-size: 11px;
+	padding: 2px 0;
+}
+.dp_cal th{
+	border: solid #000000;
+	border-width: 1px 0;
+	color: #797774;
+	background: #E3E1E4;
+	font-weight: bold;
+}
+.dp_cal td{
+	cursor: pointer;
+}
+.dp_cal thead th{
+	background: #E3E1E4;
+}
+.dp_cal td.dp_roll{
+	color: #ffffff;
+	background: #000000;
+}
+/* must have this for the IE6 select box hiding */
+.dp_hide{
+	visibility: hidden;
+}
+.dp_empty{
+	background: #057FC2;
+}
+.dp_today{
+/*
+	color: #ffffff;
+	background: #000000;
+*/
+}
+.dp_selected{
+	color: #ffffff;
+	background: 000000;
+}
+/* ---- calendar and input styles end ---- */
